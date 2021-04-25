@@ -16,6 +16,8 @@ namespace CSC234 {
 		void start();
 		// Game Function
 	private:
+		int boxChoice;
+		bool boxGame = false;
 		void run();
 		void intro();
 		void items();

@@ -50,8 +50,6 @@ namespace CSC234 {
                 boxThreeSides();
                 break;
             default:
-                cout << "There's still more to do, which box would you like to look at next? ";
-                cin >> boxChoice;
                 boxGame = true;
                 break;
             }

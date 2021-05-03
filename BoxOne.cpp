@@ -47,32 +47,34 @@ void BoxOne::B1_sideOne() {
 		{
 		case 1:
 			cout << "\n\n Knob \n";
-			cout << "Would you like to try the knob?";
+			cout << "Would you like to try the Knob?";
 			cin >> itemChoice;
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "The Knob rotates smoothly";
 			}
 			break;
 		case 2:
 			cout << "\n\n Lever \n\n";
+			cout << "Would you like to try the Lever?";
 			cin >> itemChoice;
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "When you Pulled the Lever you heard a click";
 			}
 			break;
 		case 3:
 			cout << "\n\n Pannel \n\n";
+			cout << "Would you like to try the Pannel?";
 			cin >> itemChoice;
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "With the pannel open you see";
 			}
 			break;
 		default:
 			break;
 		}
-		cout << "\n\nWhat side would you like to look at next[y/n]? ";
-		cin >> userB1;
-		system("CLS");
+		//cout << "\n\nWhat item would you like to look at next[y/n]? ";
+		//cin >> userB1;
+		//system("CLS");
 	}
 	system("CLS");
 }
@@ -92,21 +94,21 @@ void BoxOne::B1_sideTwo() {
 			cout << "\n\n Lever \n";
 			cin >> itemChoice;
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "When you Pulled the Lever you heard a click";
 			}
 			break;
 		case 2:
 			cout << "\n\n Speaker \n";
 			cin >> itemChoice;
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "The Speaker is " << "not making noise" << endl;
 			}
 			break;
 		case 3:
 			cout << "\n\n Microphone \n";
 			cin >> itemChoice;
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "You Speak into the Microphone\n";
 			}
 			break;
 		default:
@@ -134,19 +136,20 @@ void BoxOne::B1_sideThree() {
 		case 1:
 			cout << "\n\n Light \n\n";
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "The Light is " << "Un-lit" << endl ;
 			}
 			break;
 		case 2:
 			cout << "\n\n Window \n\n";
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "You see a button though the window\n";
+				cout << "Currently there isn't anything you can do with the button\n";
 			}
 			break;
 		case 3:
 			cout << "\n\n Wires \n\n";
 			if (itemChoice == 'y') {
-				cout << "";
+				cout << "After cutting the wires you hear a noise\n";
 			}
 			break;
 		default:

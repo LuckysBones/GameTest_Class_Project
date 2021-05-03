@@ -13,8 +13,5 @@ private:
 	void B3_sideThree();
 	char userB3 = 'y';
 	int sideChoice = NULL;
-	//vector <string> B3_sideOneOpt = { "Knob", "Lever", "Pannel" };
-	//vector<string>B3_sideTwoOpt = { "Lever", "Speaker", "Microphone" };
-	//vector<string>B3_sideThreeOpt = { "Un-lit Light", "Window", "Wires" };
 };
 

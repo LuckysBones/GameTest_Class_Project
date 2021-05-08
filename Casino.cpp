@@ -18,7 +18,7 @@ namespace CSC234 {
 	}
 
 	void Casino::start() {
-		std::cout << "Subclass funtion start() is not defined-test123." << endl;
+		std::cout << "Subclass funtion start() is not defined" << endl;
 	}
 
 	Casino::~Casino() {

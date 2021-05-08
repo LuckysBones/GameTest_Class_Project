@@ -9,6 +9,5 @@ int main() {
 
 		cout << "Welcome to the Wolf Casino.  You have chosen to play: " << Choice << std::endl;
 		cout << "Getting game ready." << endl;
-		Sleep(3000);
 		Casino::play(Choice); //static function call
 }

@@ -5,7 +5,7 @@ namespace CSC234 {
     //Constructor
     void EscapeDeep::EscapeDeepGame()
     {
-        cout << "Escape the Deep - Start\n";
+        //cout << "Escape the Deep - Start\n";
     }
 
     EscapeDeep* EscapeDeep::makeGame() {
@@ -20,7 +20,7 @@ namespace CSC234 {
     //Pre-Condition - the main running function for the game "Escape the Deep"
     //Post-Condition - the run function will start the game and run the associated functions
     void EscapeDeep::run() {
-        cout << "Escape the Deep - Run";
+        //cout << "Escape the Deep - Run";
         intro();
         items();
     }
@@ -30,7 +30,7 @@ namespace CSC234 {
     }
 
     void EscapeDeep::items() {
-        cout << "\n\nThere's 3 items around you and one escape hatch, that seems to be locked";
+        cout << "\n\nThere's 2 Boxes around you and one escape hatch, that seems to be locked";
 
         cout << "\n\nWhich box would you like to look at? ";
         cin >> boxChoice;
@@ -43,9 +43,6 @@ namespace CSC234 {
                 break;
             case 2:
                 boxTwoSides();
-                break;
-            case 3:
-                boxThreeSides();
                 break;
             default:
                 boxGame = true;

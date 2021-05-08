@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BoxOne.cpp" />
-    <ClCompile Include="BoxThree.cpp" />
     <ClCompile Include="BoxTwo.cpp" />
     <ClCompile Include="C++Game.cpp" />
     <ClCompile Include="Casino.cpp" />
@@ -148,7 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BoxOne.h" />
-    <ClInclude Include="BoxThree.h" />
     <ClInclude Include="BoxTwo.h" />
     <ClInclude Include="Casino.h" />
     <ClInclude Include="EscapeDeep.h" />

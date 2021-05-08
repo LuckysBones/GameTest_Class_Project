@@ -1,11 +1,10 @@
 #pragma once
 #include "Casino.h"
 #include "BoxOne.h"
-#include "BoxTwo.h"
-#include "BoxThree.h"
+#include "BoxTwo.h"q
 
 namespace CSC234 {
-	class EscapeDeep : public Casino, BoxOne, BoxTwo, BoxThree
+	class EscapeDeep : public Casino, BoxOne, BoxTwo
 	{
 	public:
 		//Constructor

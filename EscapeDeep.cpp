@@ -31,11 +31,9 @@ namespace CSC234 {
 
     void EscapeDeep::items() {
         cout << "\n\nThere's 2 Boxes around you and one escape hatch, that seems to be locked";
-
-        cout << "\n\nWhich box would you like to look at? ";
-        cin >> boxChoice;
-
         do {
+            cout << "\n\nWhich box would you like to look at? ";
+            cin >> boxChoice;
             switch (boxChoice)
             {
             case 1:
@@ -48,8 +46,8 @@ namespace CSC234 {
                 boxGame = true;
                 break;
             }
-            cout << "\n\nThere's still more to do, which box would you like to look at next? ";
-            cin >> boxChoice;
+            /*cout << "\n\nThere's still more to do, which box would you like to look at next? ";
+            cin >> boxChoice;*/
         } while (boxGame != true);
     }
 }

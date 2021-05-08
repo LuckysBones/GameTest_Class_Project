@@ -7,8 +7,9 @@
 using namespace std;
 
 void BoxOne::boxOneSides() {
+	char userInput = 'y';
 	cout << "\n\nYou See 3 parts to the boxs,\n";
-	while (userB1 == 'y') {
+	while (userInput == 'y') {
 		cout << "\n Which side would you like to look at? : ";
 		cin >> sideChoice;
 		switch (sideChoice)
@@ -22,12 +23,13 @@ void BoxOne::boxOneSides() {
 		case 3:
 			B1_sideThree();
 			break;
+		case 0:
+			userInput = 'n';
+			break;
 		default:
 			break;
 		}
-		cout << "\n Would you like to continue looking : ";
-		cin >> userB1;
-		system("CLS");
+		//system("CLS");
 	}
 }
 

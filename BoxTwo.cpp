@@ -45,13 +45,21 @@ void BoxTwo::B2_sideOne() {
 		switch (sideChoice)
 		{
 		case 1:
-			cout << "\n\none\n\n";
+			cout << "\n\nSwitch\n\n";
+			if (B2_Switch == false) {
+				B2_Switch = true;
+				cout << "The Switch is now switched to the on positsion";
+			}
+			else if (B2_Switch == true) {
+				B2_Switch = false;
+				cout << "The Switch is now switched to the off positsion";
+			}
 			break;
 		case 2:
-			cout << "\n\ntwo\n\n";
+			cout << "\n\nSmall Door\n\n";
 			break;
 		case 3:
-			cout << "\n\nthree\n\n";
+			cout << "\n\nWires\n\n";
 			break;
 		default:
 			break;
@@ -74,13 +82,13 @@ void BoxTwo::B2_sideTwo() {
 		switch (sideChoice)
 		{
 		case 1:
-			cout << "\n\none\n\n";
+			cout << "\n\nGreen Light\n\n";
 			break;
 		case 2:
-			cout << "\n\ntwo\n\n";
+			cout << "\n\nRed Light\n\n";
 			break;
 		case 3:
-			cout << "\n\nthree\n\n";
+			cout << "\n\nBlue Light\n\n";
 			break;
 		default:
 			break;
@@ -105,13 +113,13 @@ void BoxTwo::B2_sideThree() {
 		switch (sideChoice)
 		{
 		case 1:
-			cout << "\n\none\n\n";
+			cout << "\n\nAn Opaque Window\n\n";
 			break;
 		case 2:
-			cout << "\n\ntwo\n\n";
+			cout << "\n\nLever\n\n";
 			break;
 		case 3:
-			cout << "\n\nthree\n\n";
+			cout << "\n\nSpeaker\n\n";
 			break;
 		default:
 			break;

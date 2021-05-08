@@ -13,5 +13,9 @@ private:
 	void B2_sideThree();
 	char userB2 = 'y';
 	int sideChoice = NULL;
+protected:
+	bool B2_Switch = false;
+	bool B2_Smdr = false;
+	bool B2_
 };
 

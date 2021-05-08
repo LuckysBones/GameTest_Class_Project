@@ -47,7 +47,6 @@ namespace CSC234 {
                 break;
             }
             cout << "\n\nThere's still more to do, which box would you like to look at next? ";
-            /*cin >> boxChoice;*/
         } while (boxGame != true);
     }
 }

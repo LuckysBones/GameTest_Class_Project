@@ -57,9 +57,22 @@ void BoxTwo::B2_sideOne() {
 			break;
 		case 2:
 			cout << "\n\nSmall Door\n\n";
+			if (B2_Smdr == false) {
+				B2_Smdr = true;
+			}
+			else if (B2_Smdr == true) {
+				B2_Smdr = false;
+			}
+
 			break;
 		case 3:
 			cout << "\n\nWires\n\n";
+			if (B2_Wire == false) {
+				B2_Wire = true;
+			}
+			else if (B2_Wire == true) {
+				B2_Wire = false;
+			}
 			break;
 		default:
 			break;
@@ -83,12 +96,36 @@ void BoxTwo::B2_sideTwo() {
 		{
 		case 1:
 			cout << "\n\nGreen Light\n\n";
+			if (B2_Green == false) {
+				B2_Green = true;
+			}
+			else if (B2_Green == true) {
+				B2_Green = false;
+			}
 			break;
 		case 2:
 			cout << "\n\nRed Light\n\n";
+			if (B2_Red == false) {
+				B2_Red = true;
+			}
+			else if (B2_Red == true) {
+				B2_Red = false;
+			}
+			else if (B2_Red == true && B2_Blue == true) {
+
+			}
 			break;
 		case 3:
 			cout << "\n\nBlue Light\n\n";
+			if (B2_Blue == false) {
+				B2_Blue = true;
+			}
+			else if (B2_Blue == true) {
+				B2_Blue = false;
+			}
+			else if (B2_Red == true && B2_Blue == true) {
+
+			}
 			break;
 		default:
 			break;
@@ -114,12 +151,21 @@ void BoxTwo::B2_sideThree() {
 		{
 		case 1:
 			cout << "\n\nAn Opaque Window\n\n";
+			if (B2_Red == true && B2_Blue == true) {
+				cout << "You can barely see a Purple light through the window";
+			}
+			else
+			{
+				cout << "There is nothing to see here, no light's";
+			}
 			break;
 		case 2:
 			cout << "\n\nLever\n\n";
+			//turn lever on once purple light on to turn speaker on
 			break;
 		case 3:
 			cout << "\n\nSpeaker\n\n";
+			//once the lever has been pulled turn speaker on
 			break;
 		default:
 			break;

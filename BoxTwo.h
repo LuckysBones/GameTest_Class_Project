@@ -16,6 +16,9 @@ private:
 protected:
 	bool B2_Switch = false;
 	bool B2_Smdr = false;
-	bool B2_
+	bool B2_Wire = false;
+	bool B2_Green = false;
+	bool B2_Blue = false;
+	bool B2_Red = false;
 };
 

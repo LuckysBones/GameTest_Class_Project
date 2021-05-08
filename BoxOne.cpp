@@ -38,7 +38,8 @@ void BoxOne::B1_sideOne() {
 	cout <<"\nwhat would you like to look at? ";
 	vector<string>B2_sideOneOpt = { "Knob", "Lever", "Pannel" };
 	cout << endl;
-	while (userB1 == 'y') {
+	char userBoxOne = 'y';
+	while (userBoxOne == 'y') {
 		for (size_t i = 0; i < 3; i++) {
 			cout << "\n\n*" << B2_sideOneOpt[i];
 		}
@@ -93,15 +94,16 @@ void BoxOne::B1_sideOne() {
 			break;
 		}
 		cout << "\n\nWould you like to continue looking [y/n]? ";
-		cin >> userB1;
+		cin >> userBoxOne;
 	}
-	system("CLS");
+	//system("CLS");
 }
 
 void BoxOne::B1_sideTwo() {
 	cout << "\n\nYou look at one of the sides and see three objects\n\nwhat would you like to look at? ";
 	vector<string>B2_sideTwoOpt = { "Lever", "Speaker", "Microphone" };
-	while (userB1 == 'y') {
+	char userBoxTwo = 'y';
+	while (userBoxTwo == 'y') {
 		for (size_t i = 0; i < 3; i++) {
 			cout << "\n\n*" << B2_sideTwoOpt[i];
 		}
@@ -160,15 +162,16 @@ void BoxOne::B1_sideTwo() {
 			break;
 		}
 		cout << "\n\nWould you like to continue looking[y/n]? ";
-		cin >> userB1;
+		cin >> userBoxTwo;
 	}
-	system("CLS");
+	//system("CLS");
 }
 
 void BoxOne::B1_sideThree() {
 	cout << "\n\nYou look at one of the sides and see three objects\n\nwhat would you like to look at? ";
 	vector<string>B2_sideThreeOpt = { "Light", "Window", "Wires" };
-	while (userB1 == 'y') {
+	char userBoxThree = 'y';
+	while (userBoxThree == 'y') {
 		for (size_t i = 0; i < 3; i++) {
 			cout << "\n\n*" << B2_sideThreeOpt[i];
 		}
@@ -228,9 +231,9 @@ void BoxOne::B1_sideThree() {
 			break;
 		}
 		cout << "\n\nWould you like to continue looking[y/n]? ";
-		cin >> userB1;
+		cin >> userBoxThree;
 	}
-	system("CLS");
+	//system("CLS");
 }
 
 

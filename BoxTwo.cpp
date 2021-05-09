@@ -33,7 +33,7 @@ void BoxTwo::boxTwoSides() {
 
 void BoxTwo::B2_sideOne() {
 	cout << "\n\nYou look at one of the sides and see three objects\n\nwhat would you like to look at? ";
-	vector<string>B2_sideOneOpt = { "Knob", "Lever", "Pannel" };
+	vector<string>B2_sideOneOpt = { "Switch", "Small Door", "Wires" };
 	cout << endl;
 	while (userB2 == 'y') {
 		for (size_t i = 0; i < 3; i++) {
@@ -65,13 +65,16 @@ void BoxTwo::B2_sideOne() {
 
 			break;
 		case 3:
-			cout << "\n\nWires\n\n";
-			if (B2_Wire == false) {
-				B2_Wire = true;
-			}
-			else if (B2_Wire == true) {
-				B2_Wire = false;
-			}
+			cout << "\n\n Wires \n\n";
+			//if ( == 'y') {
+				if (B2_Wire == true) {
+					cout << "You already cut the Wire\n";
+					B2_Wire = true;
+				}
+				else if (B2_Wire == false) {
+					cout << "After cutting the wires nothing seems to change\n";
+					B2_Wire = true;
+				}
 			break;
 		default:
 			break;
@@ -84,7 +87,7 @@ void BoxTwo::B2_sideOne() {
 
 void BoxTwo::B2_sideTwo() {
 	cout << "\n\nYou look at one of the sides and see three objects\n\nwhat would you like to look at? ";
-	vector<string>B2_sideTwoOpt = { "Lever", "Speaker", "Microphone" };
+	vector<string>B2_sideTwoOpt = { "Green Light", "Red Light", "Blue Light" };
 	while (userB2 == 'y') {
 		for (size_t i = 0; i < 3; i++) {
 			cout << "\n*" << B2_sideTwoOpt[i];
@@ -115,7 +118,10 @@ void BoxTwo::B2_sideTwo() {
 				B2_Red = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-				cout << "The Red Light has been turned off";
+				cout << "The Red Light has been turned on and you hear a door open";
+				B2_Red = true;
+				B2_Blue = true;
+				B2_Lights = true;
 			}
 			break;
 		case 3:
@@ -129,7 +135,10 @@ void BoxTwo::B2_sideTwo() {
 				B2_Blue = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-				cout << "The Blue Light has been turned on";
+				cout << "The Blue Light has been turned on and you hear a door open";
+				B2_Red = true;
+				B2_Blue = true;
+				B2_Lights = true;
 			}
 			break;
 		default:
@@ -148,7 +157,6 @@ void BoxTwo::B2_sideThree() {
 	while (userB2 == 'y') {
 		for (size_t i = 0; i < 3; i++) {
 			cout << "\n*" << B2_sideThreeOpt[i];
-			//cin >> sideChoice;
 		}
 		cout << "\n Which side would you like to look at? : ";
 		cin >> sideChoice;

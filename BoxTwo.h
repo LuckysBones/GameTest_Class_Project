@@ -20,5 +20,6 @@ protected:
 	bool B2_Green = false;
 	bool B2_Blue = false;
 	bool B2_Red = false;
+	bool B2_Lights = false;
 };
 

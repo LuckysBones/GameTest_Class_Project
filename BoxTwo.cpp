@@ -7,43 +7,56 @@
 using namespace std;
 
 void BoxTwo::boxTwoSides() {
-	cout << "\n\nYou See 3 parts to the boxs,\n";
-	while (userB2 == 'y') {
+	while (mainChoice != 0) {
+		system("CLS");
+		cout << "\n\t\t\tBox Two";
+		printf("\n\n  --------------------------------------------------");
+		cout << "\n\n You See 3 sides to the box,\n\n";
+		cout << "1 - Side One\n2 - Side Two\n3 - Side Three\n";
+		cout << "0 - Return";
+		printf("\n\n  --------------------------------------------------\n");
 		cout << "\n Which side would you like to look at? : ";
-		cin >> sideChoice;
-		switch (sideChoice)
+		cin >> mainChoice;
+		switch (mainChoice)
 		{
 		case 1:
+			system("CLS");
 			B2_sideOne();
 			break;
 		case 2:
+			system("CLS");
 			B2_sideTwo();
 			break;
 		case 3:
+			system("CLS");
 			B2_sideThree();
 			break;
 		default:
 			break;
 		}
-		cout << "\n\nWhat side would you like to look at next[y/n]? ";
-		cin >> userB2;
+		resetChoice();
 	}
+	resetMainLoop();
 }
 
 void BoxTwo::B2_sideOne() {
-	cout << "\n\nYou look at one of the sides and see three objects\n\nwhat would you like to look at? ";
-	vector<string>B2_sideOneOpt = { "Switch", "Small Door", "Wires" };
-	cout << endl;
-	while (userB2 == 'y') {
+	while (sideChoice != 0) {
+		cout << "\n\t\tBox Two - Side One";
+		printf("\n\n  --------------------------------------------------");
+		cout << "\n\n You look at one of the sides and see three objects\n\n";
+		vector<string>B2_sideOneOpt = { "Switch", "Small Door", "Wires" };
 		for (size_t i = 0; i < 3; i++) {
-			cout << "\n*" << B2_sideOneOpt[i];
+			cout << i + 1 << " - " << B2_sideOneOpt[i] << "\n";
 		}
+		cout << "0 - Return";
+		printf("\n\n  --------------------------------------------------\n");
 		cout << "\n Which side would you like to look at? : ";
 		cin >> sideChoice;
+		system("CLS");
 		switch (sideChoice)
 		{
 		case 1:
-			cout << "\n\nSwitch\n\n";
+			cout << "\n\n\t\tSwitch\n\n";
 			if (B2_Switch == false) {
 				B2_Switch = true;
 				cout << "The Switch is now switched to the on positsion";
@@ -56,7 +69,7 @@ void BoxTwo::B2_sideOne() {
 			}
 			break;
 		case 2:
-			cout << "\n\nSmall Door\n\n";
+			cout << "\n\n\t\tSmall Door\n\n";
 			cout << "Would you like to try to open the Small purple Door?";
 			if (B2_Smdr == false) {
 				
@@ -67,7 +80,7 @@ void BoxTwo::B2_sideOne() {
 
 			break;
 		case 3:
-			cout << "\n\n Wires \n\n";
+			cout << "\n\n\t\t Wires \n\n";
 			//if ( == 'y') {
 				if (B2_Wire == true) {
 					cout << "You already cut the Wire\n";
@@ -81,24 +94,28 @@ void BoxTwo::B2_sideOne() {
 		default:
 			break;
 		}
-		cout << "\n\nWhat side would you like to look at next[y/n]? ";
-		cin >> userB2;
+		printf("\n\n  --------------------------------------------------\n");
 	}
 }
 
 void BoxTwo::B2_sideTwo() {
-	cout << "\n\nYou look at one of the sides and see three objects\n\nwhat would you like to look at? ";
-	vector<string>B2_sideTwoOpt = { "Green Light", "Red Light", "Blue Light" };
-	while (userB2 == 'y') {
+	while (sideChoice != 0) {
+		cout << "\n\t\tBox Two - Side Two";
+		printf("\n\n  --------------------------------------------------");
+		cout << "\n\n You look at one of the sides and see three objects\n\n";
+		vector<string>B2_sideTwoOpt = { "Green Light", "Red Light", "Blue Light" };
 		for (size_t i = 0; i < 3; i++) {
-			cout << "\n*" << B2_sideTwoOpt[i];
+			cout << i + 1 << " - " << B2_sideTwoOpt[i] << "\n";
 		}
+		cout << "0 - Return";
+		printf("\n\n  --------------------------------------------------\n");
 		cout << "\n Which side would you like to look at? : ";
 		cin >> sideChoice;
+		system("CLS");
 		switch (sideChoice)
 		{
 		case 1:
-			cout << "\n\nGreen Light\n\n";
+			cout << "\n\n\t\tGreen Light\n";
 			if (B2_Green == false) {
 				cout << "The Green Light has been turned on";
 				B2_Green = true;
@@ -109,7 +126,7 @@ void BoxTwo::B2_sideTwo() {
 			}
 			break;
 		case 2:
-			cout << "\n\nRed Light\n\n";
+			cout << "\n\n\t\tRed Light\n";
 			if (B2_Red == false) {
 				cout << "The Red Light has been turned on";
 				B2_Red = true;
@@ -126,7 +143,8 @@ void BoxTwo::B2_sideTwo() {
 			}
 			break;
 		case 3:
-			cout << "\n\nBlue Light\n\n";
+			cout << "\n\n\t\tBlue Light\n";
+			printf("\n  --------------------------------------------------\n");
 			if (B2_Blue == false) {
 				cout << "The Blue Light has been turned on";
 				B2_Blue = true;
@@ -145,25 +163,30 @@ void BoxTwo::B2_sideTwo() {
 		default:
 			break;
 		}
-		cout << "\n\nWhat side would you like to look at next [y/n]? ";
-		cin >> userB2;
+		printf("\n\n  --------------------------------------------------\n");
 	}
 }
 
 void BoxTwo::B2_sideThree() {
-	cout << "\n\nYou look at one of the sides and see three objects\n\nwhat would you like to look at? ";
-	vector<string>B2_sideThreeOpt = { "Un-lit Light", "Window", "Wires" };
-	cout << endl;
-	while (userB2 == 'y') {
+	while (sideChoice != 0) {
+		cout << "\n\t\tBox Two - Side Three";
+		printf("\n\n  --------------------------------------------------");
+		cout << "\n\n You look at one of the sides and see three objects\n\n";
+		vector<string>B2_sideThreeOpt = { "An Opaque Window", "Lever", "Screen" };
+		cout << endl;
 		for (size_t i = 0; i < 3; i++) {
-			cout << "\n*" << B2_sideThreeOpt[i];
+			cout << i + 1 << " - " << B2_sideThreeOpt[i] << "\n";
 		}
+		cout << "0 - Return";
+		printf("\n\n  --------------------------------------------------\n");
 		cout << "\n Which side would you like to look at? : ";
 		cin >> sideChoice;
+		system("CLS");
 		switch (sideChoice)
 		{
 		case 1:
-			cout << "\n\nAn Opaque Window\n\n";
+			cout << "\n\n\t\tAn Opaque Window\n";
+			printf("\n  --------------------------------------------------\n");
 			if (B2_Red == true && B2_Blue == true) {
 				cout << "You can barely see a Purple light through the window";
 				cout << "You can kind of see some letters spelling out door";
@@ -172,11 +195,13 @@ void BoxTwo::B2_sideThree() {
 			}
 			break;
 		case 2:
-			cout << "\n\nLever\n\n";
+			cout << "\n\n\t\tLever\n";
+			printf("\n  --------------------------------------------------\n");
 			cout << "This lever feels odd, like it's not even real";
 			break;
 		case 3:
-			cout << "\n\nScreen\n\n";
+			cout << "\n\n\t\tScreen\n";
+			printf("\n  --------------------------------------------------\n");
 			if (B2_Screen == true) {
 				cout << "The Screen seems to have turned off at some point";
 			}
@@ -187,8 +212,7 @@ void BoxTwo::B2_sideThree() {
 		default:
 			break;
 		}
-		cout << "\n\nWhat side would you like to look at next[y/n]? ";
-		cin >> userB2;
+		printf("\n\n  --------------------------------------------------\n");
 	}
 }
 

@@ -38,7 +38,6 @@ void BoxTwo::B2_sideOne() {
 	while (userB2 == 'y') {
 		for (size_t i = 0; i < 3; i++) {
 			cout << "\n*" << B2_sideOneOpt[i];
-			//cin >> sideChoice;
 		}
 		cout << "\n Which side would you like to look at? : ";
 		cin >> sideChoice;
@@ -97,34 +96,40 @@ void BoxTwo::B2_sideTwo() {
 		case 1:
 			cout << "\n\nGreen Light\n\n";
 			if (B2_Green == false) {
+				cout << "The Green Light has been turned on";
 				B2_Green = true;
 			}
 			else if (B2_Green == true) {
+				cout << "The Green Light has been turned off";
 				B2_Green = false;
 			}
 			break;
 		case 2:
 			cout << "\n\nRed Light\n\n";
 			if (B2_Red == false) {
+				cout << "The Red Light has been turned on";
 				B2_Red = true;
 			}
 			else if (B2_Red == true) {
+				cout << "The Red Light has been turned off";
 				B2_Red = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-
+				cout << "The Red Light has been turned off";
 			}
 			break;
 		case 3:
 			cout << "\n\nBlue Light\n\n";
 			if (B2_Blue == false) {
+				cout << "The Blue Light has been turned on";
 				B2_Blue = true;
 			}
 			else if (B2_Blue == true) {
+				cout << "The Blue Light has been turned off";
 				B2_Blue = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-
+				cout << "The Blue Light has been turned on";
 			}
 			break;
 		default:

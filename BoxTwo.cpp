@@ -27,7 +27,6 @@ void BoxTwo::boxTwoSides() {
 		}
 		cout << "\n\nWhat side would you like to look at next[y/n]? ";
 		cin >> userB2;
-		system("CLS");
 	}
 }
 
@@ -48,19 +47,22 @@ void BoxTwo::B2_sideOne() {
 			if (B2_Switch == false) {
 				B2_Switch = true;
 				cout << "The Switch is now switched to the on positsion";
+				B2_Screen = true;
 			}
 			else if (B2_Switch == true) {
 				B2_Switch = false;
 				cout << "The Switch is now switched to the off positsion";
+				B2_Screen = false;
 			}
 			break;
 		case 2:
 			cout << "\n\nSmall Door\n\n";
+			cout << "Would you like to try to open the Small purple Door?";
 			if (B2_Smdr == false) {
-				B2_Smdr = true;
+				
 			}
 			else if (B2_Smdr == true) {
-				B2_Smdr = false;
+				B2_Box2done = true;
 			}
 
 			break;
@@ -82,7 +84,6 @@ void BoxTwo::B2_sideOne() {
 		cout << "\n\nWhat side would you like to look at next[y/n]? ";
 		cin >> userB2;
 	}
-	system("CLS");
 }
 
 void BoxTwo::B2_sideTwo() {
@@ -118,7 +119,7 @@ void BoxTwo::B2_sideTwo() {
 				B2_Red = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-				cout << "The Red Light has been turned on and you hear a door open";
+				cout << "The Red Light and Blue Light turned off";
 				B2_Red = true;
 				B2_Blue = true;
 				B2_Lights = true;
@@ -135,7 +136,7 @@ void BoxTwo::B2_sideTwo() {
 				B2_Blue = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-				cout << "The Blue Light has been turned on and you hear a door open";
+				cout << "The Red Light and Blue Light turned off";
 				B2_Red = true;
 				B2_Blue = true;
 				B2_Lights = true;
@@ -144,7 +145,7 @@ void BoxTwo::B2_sideTwo() {
 		default:
 			break;
 		}
-		cout << "\n\nWhat side would you like to look at next[y/n]? ";
+		cout << "\n\nWhat side would you like to look at next [y/n]? ";
 		cin >> userB2;
 	}
 }
@@ -165,23 +166,22 @@ void BoxTwo::B2_sideThree() {
 			cout << "\n\nAn Opaque Window\n\n";
 			if (B2_Red == true && B2_Blue == true) {
 				cout << "You can barely see a Purple light through the window";
-			}
-			else
-			{
+				cout << "You can kind of see some letters spelling out door";
+			}else{
 				cout << "There is nothing to see here, no light\n";
 			}
 			break;
 		case 2:
 			cout << "\n\nLever\n\n";
-			cout << "This lever feels odd, like it' snot even real";
+			cout << "This lever feels odd, like it's not even real";
 			break;
 		case 3:
 			cout << "\n\nScreen\n\n";
 			if (B2_Screen == true) {
-
+				cout << "The Screen seems to have turned off at some point";
 			}
 			else if (B2_Screen == false) {
-
+				cout << "The screen is currently a bright white";
 			}
 			break;
 		default:

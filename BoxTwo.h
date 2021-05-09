@@ -22,5 +22,6 @@ protected:
 	bool B2_Red = false;
 	bool B2_Lights = false;
 	bool B2_Screen = false;
+	bool B2_Box2done = false;
 };
 

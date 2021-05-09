@@ -147,7 +147,6 @@ void BoxTwo::B2_sideTwo() {
 		cout << "\n\nWhat side would you like to look at next[y/n]? ";
 		cin >> userB2;
 	}
-	system("CLS");
 }
 
 void BoxTwo::B2_sideThree() {
@@ -169,16 +168,21 @@ void BoxTwo::B2_sideThree() {
 			}
 			else
 			{
-				cout << "There is nothing to see here, no light's";
+				cout << "There is nothing to see here, no light\n";
 			}
 			break;
 		case 2:
 			cout << "\n\nLever\n\n";
-			//turn lever on once purple light on to turn speaker on
+			cout << "This lever feels odd, like it' snot even real";
 			break;
 		case 3:
-			cout << "\n\nSpeaker\n\n";
-			//once the lever has been pulled turn speaker on
+			cout << "\n\nScreen\n\n";
+			if (B2_Screen == true) {
+
+			}
+			else if (B2_Screen == false) {
+
+			}
 			break;
 		default:
 			break;
@@ -186,5 +190,8 @@ void BoxTwo::B2_sideThree() {
 		cout << "\n\nWhat side would you like to look at next[y/n]? ";
 		cin >> userB2;
 	}
-	system("CLS");
 }
+
+//B2_Lights
+//B2_Screen
+//

@@ -9,6 +9,7 @@ public:
 	void boxTwoSides(); 
 	int resetChoice() { return sideChoice = 10; };
 	int resetMainLoop() { return mainChoice = 10; };
+	void isBox_done();
 private:
 	void B2_sideOne();
 	void B2_sideTwo();

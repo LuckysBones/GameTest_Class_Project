@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <cstdlib>
+#include <windows.h>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ void BoxOne::boxOneSides() {
 		cout << "\n\t\t\tBox One";
 		printf("\n\n  --------------------------------------------------");
 		cout << "\n\n You See 3 sides to the box,\n\n";
-		cout << " 1 - Side One\n 2 - Side Two\n 3 - Side Three\n";
+		cout << " 1 - Side One\n 2 - Side Two\n 3 - Side Three\n 4 - Check Box\n";
 		cout << " 0 - Return";
 		printf("\n\n  --------------------------------------------------\n");
 		cout << "\n Which side would you like to look at? : ";
@@ -31,6 +32,9 @@ void BoxOne::boxOneSides() {
 			system("CLS");
 			B1_sideThree();
 			break;
+		case 4:
+			system("CLS");
+			isBox_done();
 		default:
 			break;
 		}
@@ -243,3 +247,16 @@ void BoxOne::B1_sideThree() {
 //knob
 //light
 //B1_done
+
+void BoxOne::isBox_done() {
+	if (B1_light == true && B1_knob == true && B1_done == true) {
+		cout << "You have finished Box One\n";
+	}
+	else if (B1_light == false || B1_knob == true && B1_done == true) {
+		cout << "There is still more to be done with Box One\n\n";
+	}
+	else {
+		cout << "You have found anything yet?\nWhere you going?\n\n";
+	}
+	Sleep(5000);
+}

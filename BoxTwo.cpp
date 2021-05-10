@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <cstdlib>
+#include <windows.h>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ void BoxTwo::boxTwoSides() {
 		cout << "\n\t\t\tBox Two";
 		printf("\n\n  --------------------------------------------------");
 		cout << "\n\n You See 3 sides to the box,\n\n";
-		cout << "1 - Side One\n2 - Side Two\n3 - Side Three\n";
+		cout << "1 - Side One\n2 - Side Two\n3 - Side Three\n4 - Box Check\n";
 		cout << "0 - Return";
 		printf("\n\n  --------------------------------------------------\n");
 		cout << "\n Which side would you like to look at? : ";
@@ -31,6 +32,9 @@ void BoxTwo::boxTwoSides() {
 			system("CLS");
 			B2_sideThree();
 			break;
+		case 4:
+			system("CLS");
+			isBox_done();
 		default:
 			break;
 		}
@@ -72,10 +76,11 @@ void BoxTwo::B2_sideOne() {
 			cout << "\n\n\t\tSmall Door\n\n";
 			cout << "Would you like to try to open the Small purple Door?";
 			if (B2_Smdr == false) {
-				
+				cout << "1\n";
 			}
 			else if (B2_Smdr == true) {
 				B2_Box2done = true;
+				cout << "2\n";
 			}
 
 			break;
@@ -137,8 +142,8 @@ void BoxTwo::B2_sideTwo() {
 			}
 			else if (B2_Red == true && B2_Blue == true) {
 				cout << "The Red Light and Blue Light turned off";
-				B2_Red = true;
-				B2_Blue = true;
+				B2_Red = false;
+				B2_Blue = false;
 				B2_Lights = true;
 			}
 			break;
@@ -155,8 +160,8 @@ void BoxTwo::B2_sideTwo() {
 			}
 			else if (B2_Red == true && B2_Blue == true) {
 				cout << "The Red Light and Blue Light turned off";
-				B2_Red = true;
-				B2_Blue = true;
+				B2_Red = false;
+				B2_Blue = false;
 				B2_Lights = true;
 			}
 			break;
@@ -190,6 +195,7 @@ void BoxTwo::B2_sideThree() {
 			if (B2_Red == true && B2_Blue == true) {
 				cout << "You can barely see a Purple light through the window";
 				cout << "You can kind of see some letters spelling out door";
+				B2_Smdr = true;
 			}else{
 				cout << "There is nothing to see here, no light\n";
 			}
@@ -216,6 +222,15 @@ void BoxTwo::B2_sideThree() {
 	}
 }
 
-//B2_Lights
-//B2_Screen
-//B2_Box2done
+void BoxTwo::isBox_done() {
+	if (B2_Lights == true && B2_Screen == true && B2_Box2done == true) {
+		cout << "You have finished Box Two\n";
+	}
+	else if (B2_Lights == false || B2_Screen == false || B2_Box2done == false) {
+		cout << "There is still more to be done with Box Two\n\n";
+	}
+	else {
+		cout << "You have found anything yet?\nWhere you going?\n\n";
+	}
+	Sleep(5000);
+}

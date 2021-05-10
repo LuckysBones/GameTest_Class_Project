@@ -10,6 +10,7 @@ public:
 	bool BoxOneComplete = false;
 	int resetChoice() { return sideChoice = 10; };
 	int resetMainLoop() { return mainChoice = 10; };
+	void isBox_done();
 private:
 	void B1_sideOne();
 	void B1_sideTwo();

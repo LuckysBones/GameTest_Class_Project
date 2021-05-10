@@ -136,7 +136,7 @@ void BoxTwo::B2_sideTwo() {
 				cout << "The Red Light has been turned on";
 				B2_Red = true;
 			}
-			else if (B2_Red == true) {
+			else if (B2_Red == true && B2_Blue != true) {
 				cout << "The Red Light has been turned off";
 				B2_Red = false;
 			}
@@ -154,7 +154,7 @@ void BoxTwo::B2_sideTwo() {
 				cout << "The Blue Light has been turned on";
 				B2_Blue = true;
 			}
-			else if (B2_Blue == true) {
+			else if (B2_Blue == true && B2_Red != true) {
 				cout << "The Blue Light has been turned off";
 				B2_Blue = false;
 			}

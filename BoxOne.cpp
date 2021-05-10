@@ -7,6 +7,8 @@
 
 using namespace std;
 
+//Pre-conditional: Takes user input from EscapeDeep to enter
+//Post-conditional: Takes user input once more, to redirect to a Side
 void BoxOne::boxOneSides() {
 	while (mainChoice != 0) {
 		system("CLS");
@@ -43,6 +45,7 @@ void BoxOne::boxOneSides() {
 	resetMainLoop();
 }
 
+//Post-conditional: User picks a case and to see if they can pick the correct options 
 void BoxOne::B1_sideOne() {
 	while (sideChoice != 0) {
 		cout << "\n\t\tBox One - Side One";
@@ -99,6 +102,7 @@ void BoxOne::B1_sideOne() {
 	}
 }
 
+//Post-conditional: User picks a case and to see if they can pick the correct options 
 void BoxOne::B1_sideTwo() {
 	while (sideChoice != 0) {
 		cout << "\n\t\tBox One - Side Two";
@@ -159,6 +163,7 @@ void BoxOne::B1_sideTwo() {
 	}
 }
 
+//Post-conditional: User picks a case and to see if they can pick the correct options 
 void BoxOne::B1_sideThree() {
 	while (sideChoice != 0) {
 		cout << "\n\t\tBox One - Side Three";
@@ -215,12 +220,8 @@ void BoxOne::B1_sideThree() {
 	}
 }
 
-
-
-//knob
-//light
-//B1_done
-
+//Post-conditional: once all the correct bool are true the if statemnt will tell players 
+// if they have finished the box or not
 void BoxOne::isBox_done() {
 	if (B1_light == true && B1_knob == true && B1_done == true) {
 		cout << "You have finished Box One\n";
@@ -232,5 +233,5 @@ void BoxOne::isBox_done() {
 	else {
 		cout << "You have found anything yet?\nWhere you going?\n\n";
 	}
-	Sleep(5000);
+	Sleep(3000);
 }

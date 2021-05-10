@@ -8,7 +8,9 @@ class BoxOne
 public:
 	void boxOneSides();
 	bool BoxOneDone = false;
+	//Post-conditional: Resets variable to an unused int
 	int resetChoice() { return sideChoice = 10; };
+	//Post-conditional: Resets variable to an unused int
 	int resetMainLoop() { return mainChoice = 10; };
 	void isBox_done();
 private:

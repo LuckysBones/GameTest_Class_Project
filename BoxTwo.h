@@ -7,7 +7,9 @@ class BoxTwo
 {
 public:
 	void boxTwoSides(); 
+	//Post-conditional: Resets variable to an unused int
 	int resetChoice() { return sideChoice = 10; };
+	//Post-conditional: Resets variable to an unused int
 	int resetMainLoop() { return mainChoice = 10; };
 	void isBox_done();
 	bool B2Done = false;

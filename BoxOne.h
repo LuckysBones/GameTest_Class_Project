@@ -7,7 +7,7 @@ class BoxOne
 {
 public:
 	void boxOneSides();
-	bool BoxOneComplete = false;
+	bool BoxOneDone = false;
 	int resetChoice() { return sideChoice = 10; };
 	int resetMainLoop() { return mainChoice = 10; };
 	void isBox_done();
@@ -18,7 +18,6 @@ private:
 	char userB1 = 'y';
 	int sideChoice = 10;
 	int mainChoice = 10;
-	char itemChoice;
 protected:
 	bool B1_light = false;
 	bool B1_wire = false;

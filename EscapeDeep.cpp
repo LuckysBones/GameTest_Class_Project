@@ -43,12 +43,30 @@ namespace CSC234 {
             case 2:
                 boxTwoSides();
                 break;
+            case 3:
+                EscapeHatch();
+                break;
             default:
-                boxGame = true;
                 break;
             }
 
             cout << "\n\nThere's still more to do, which box would you like to look at next? ";
         } while (boxGame != true);
     }
+    void EscapeDeep::EscapeHatch() {
+        if (B2Done == true && BoxOneDone == true) {
+            cout << "Done Done";
+            boxGame = true;
+        }else if (B2Done == true && BoxOneDone != true) {
+            cout << "Done Not-Done";
+        }
+        else if (B2Done != true && BoxOneDone == true) {
+            cout << "Not-Done Done";
+        }
+        else {
+            cout << "Not Done";
+        }
+    }
 }
+
+

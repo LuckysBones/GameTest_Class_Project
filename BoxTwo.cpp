@@ -141,9 +141,7 @@ void BoxTwo::B2_sideTwo() {
 				B2_Red = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-				cout << "The Red Light and Blue Light turned off";
-				B2_Red = false;
-				B2_Blue = false;
+				cout << "The Red Light and Blue Light are both on";
 				B2_Lights = true;
 			}
 			break;
@@ -159,9 +157,7 @@ void BoxTwo::B2_sideTwo() {
 				B2_Blue = false;
 			}
 			else if (B2_Red == true && B2_Blue == true) {
-				cout << "The Red Light and Blue Light turned off";
-				B2_Red = false;
-				B2_Blue = false;
+				cout << "The Red Light and Blue Light are both on";
 				B2_Lights = true;
 			}
 			break;
@@ -192,7 +188,7 @@ void BoxTwo::B2_sideThree() {
 		case 1:
 			cout << "\n\n\t\tAn Opaque Window\n";
 			printf("\n  --------------------------------------------------\n");
-			if (B2_Red == true && B2_Blue == true) {
+			if (B2_Lights == true) {
 				cout << "You can barely see a Purple light through the window";
 				cout << "You can kind of see some letters spelling out door";
 				B2_Smdr = true;
@@ -225,6 +221,7 @@ void BoxTwo::B2_sideThree() {
 void BoxTwo::isBox_done() {
 	if (B2_Lights == true && B2_Screen == true && B2_Box2done == true) {
 		cout << "You have finished Box Two\n";
+		B2Done = true;
 	}
 	else if (B2_Lights == false || B2_Screen == false || B2_Box2done == false) {
 		cout << "There is still more to be done with Box Two\n\n";

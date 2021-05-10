@@ -13,6 +13,7 @@ namespace CSC234 {
 		//This plays the game
 		void start();
 		// Game Function
+		void EscapeHatch();
 	private:
 		int boxChoice = NULL;
 		bool boxGame = false;
